@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coconut Maturity Classifier</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h1 class="text-2xl font-bold mb-6 text-center">Coconut Maturity Classifier</h1>
+
+        <!-- Image Upload -->
+        <div class="mb-4">
+            <label class="block text-sm font-medium text-gray-700 mb-2">Upload Image</label>
+            <input type="file" id="imageInput" accept="image/*" class="w-full p-2 border rounded">
+        </div>
+
+        <!-- Camera Capture -->
+        <div class="mb-4">
+            <label class="block text-sm font-medium text-gray-700 mb-2">Or Capture Photo</label>
+            <video id="video" class="w-full h-48 bg-black rounded" autoplay></video>
+            <canvas id="canvas" class="hidden"></canvas>
+            <button id="capture" class="mt-2 w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Capture Photo</button>
+        </div>
+
+        <!-- Submit Button -->
+        <button id="submit" class="w-full bg-green-500 text-white p-2 rounded hover:bg-green-600 mb-4">Submit</button>
+
+        <!-- Prediction Result -->
+        <div id="result" class="text-center">
+            <p id="prediction" class="text-lg font-semibold"></p>
+            <p id="confidence" class="text-sm text-gray-600"></p>
+            <p id="error" class="text-sm text-red-600"></p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

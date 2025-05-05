@@ -1,0 +1,12 @@
+#video, #canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+#result {
+    min-height: 60px;
+}
