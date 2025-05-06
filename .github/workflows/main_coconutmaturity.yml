@@ -68,4 +68,4 @@ jobs:
         with:
           app-name: 'coconutmaturity'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_6D179138DEB8406BA5387950F964CFF4 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9CD375D0B69247A7B1C58B5CE5EB6387 }}
